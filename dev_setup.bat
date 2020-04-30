@@ -3,31 +3,32 @@ call choco install boxstarter -y
 
 REM # Windows set up
 Update-ExecutionPolicy Unrestricted -Force 
-Enable-RemoteDesktop
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions
 
 REM # Choco packages
 call choco install chocolatey &
-call choco install chocolatey-core.extension -y &
-call choco install chocolatey-windowsupdate.extension -y &
-call choco install ConEmu -y &
-call choco install docker -y &
+call choco install microsoft-windows-terminal -y &
 call choco install dotnetcore-sdk -y &
-call choco install Firefox -y &
+call choco install powershell-core --install-arguments='"ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1"' &
 call choco install git -y &
-call choco install git.install -y &
-call choco install gitextensions -y &
-call choco install GoogleChrome -y &
-call choco install kubernetes-cli -y &
-call choco install lastpass -y &
-call choco install microsoft-build-tools -y &
-call choco install minikube -y &
-call choco install netfx-4.7-devpack -y &
-call choco install nodejs -y &
-call choco install nuget.commandline -y &
 call choco install poshgit -y &
-call choco install resharper -y &
-call choco install slack -y &
+call choco install oh-my-posh -y &
+call choco install zoom -y &
+
+REM # Optional packages
+REM ### call choco install docker -y &
+REM ### call choco install Firefox -y &
+REM ### call choco install gitextensions -y &
+
+REM ### call choco install kubernetes-cli -y &
+REM ### call choco install lastpass -y &
+REM ### call choco install microsoft-build-tools -y &
+REM ### call choco install minikube -y &
+REM ### call choco install netfx-4.7-devpack -y &
+REM ### call choco install nodejs -y &
+REM ### call choco install nuget.commandline -y &
+REM ### call choco install resharper -y &
+REM ### call choco install slack -y &
 
 REM # Ensure vscode command line 
 
