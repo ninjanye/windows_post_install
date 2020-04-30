@@ -9,6 +9,7 @@ REM # Choco packages
 call choco install chocolatey &
 call choco install microsoft-windows-terminal -y &
 call choco install dotnetcore-sdk -y &
+call choco install vscode -y &
 call choco install powershell-core --install-arguments='"ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1"' &
 call choco install git -y &
 call choco install poshgit -y &
